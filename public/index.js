@@ -176,7 +176,7 @@
    */
   function fetchSpecificPokemon() {
     let pokedexNumber = document.querySelector("input").value;
-    if ((pokedexNumber > 0) && (pokedexNumber < 494)) {
+    if ((pokedexNumber >= firstKantoPokemon) && (pokedexNumber <= lastSinnohPokemon)) {
       fetch("/specific?number=" + pokedexNumber)
         .then(statusCheck)
         .then(res => res.json())
