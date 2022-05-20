@@ -1,47 +1,50 @@
-# *FILL IN NAME* API Documentation
-*Fill in a short description here about the API's purpose.*
+# Favorite Pokemon API Documentation
+The favorite pokemon API provides a list of my favorite pokemon
 
-## *Fill in Endpoint 1 Title*
-**Request Format:** *Fill in example request format*
+## Get a list of my favorite pokemon
+**Request Format:** /favorite
 
-**Request Type:** *Fill in request type*
+**Request Type:** GET
 
 **Returned Data Format**: Plain Text
 
-**Description:** *Fill in description*
+**Description:** returns a list of my favorite pokemon by their pokedex numbers
 
 
-**Example Request:** *Fill in example request*
+**Example Request:** /favorite
 
 **Example Response:**
-*Fill in example response in the ticks*
-
-```
-
-```
+149
+350
+448
+330
+257
+384
 
 **Error Handling:**
-*Fill in an example of the error handling*
+No error handling in this request
 
-## *Fill in Endpoint 2 Title*
-**Request Format:** *Fill in example request format*
+## Get a specific pokemon
+**Request Format:** /specific?number=pokemonNumber
 
-**Request Type:** *Fill in request type*
+**Request Type:** GET
 
 **Returned Data Format**: JSON
 
-**Description:** *Fill in description*
+**Description:** returns a specific pokemon number
 
-**Example Request:** *Fill in example request*
+**Example Request:** /specific?number=150
 
 **Example Response:**
 *Fill in example response in the {}*
 
 ```json
 {
+  "number": 150
 
 }
 ```
 
 **Error Handling:**
-*Fill in an example of the error handling*
+Possible 400 level error if the specified pokedex number doesn't exist (not between 1 and 493 inclusive)
+Possible 400 level error if no pokedex number is specified
